@@ -70,8 +70,7 @@ public class WeatherApi {
   }
 
   /**
-   * @return JsonObject from API, you can directly call this method since @param
-   * weatherService is
+   * @return JsonObject from API, you can directly call this method since weatherService is
    * already initialized
    */
   public Observable<JsonObject> getWeather(String cityName, int numOfDays) {
