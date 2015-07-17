@@ -8,6 +8,7 @@ public class Config {
 
   //Base Url
   public static final String BASE_URL = "http://api.openweathermap.org/data/2.5/forecast/daily";
+  public static final String IMAGE_URL = "http://openweathermap.org/img/w/";
 
   //Query Parameters
   public static final String PARAM_MODE = "mode";
@@ -18,13 +19,4 @@ public class Config {
   //Query Default Values
   public static final String JSON = "json";
   public static final String METRIC = "metric";
-
-  //Keys for extracting values from json objects
-  public static final String OWM_LIST = "list";
-  public static final String OWM_WEATHER = "weather";
-  public static final String OWM_TEMPERATURE = "temp";
-  public static final String OWM_MAX = "max";
-  public static final String OWM_MIN = "min";
-  public static final String OWM_DATETIME = "dt";
-  public static final String OWM_DESCRIPTION = "main";
 }

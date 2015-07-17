@@ -85,7 +85,7 @@ public class WeatherApi {
      * @param numOfDays the total numbers of days to forecast
      * @return JsonObject from Observable pattern
      */
-    @GET("?" + PARAM_MODE + "=" + JSON + "&" + PARAM_UNITS + "=" + METRIC)
+    @GET("/?" + PARAM_MODE + "=" + JSON + "&" + PARAM_UNITS + "=" + METRIC)
     Observable<JsonObject> getWeather(@Query(PARAM_QUERY) String cityName,
         @Query(PARAM_DAYS) int numOfDays);
   }

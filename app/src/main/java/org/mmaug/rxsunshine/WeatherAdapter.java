@@ -6,7 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
+
+import static org.mmaug.rxsunshine.Config.IMAGE_URL;
 
 /**
  * Created by poepoe on 17/7/15.
@@ -44,6 +47,9 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
   @Override public void onBindViewHolder(ViewHolder viewHolder, int i) {
     WeatherItem item = weatherItemArrayList.get(i);
     viewHolder.mWeatherText.setText(item.text);
+    Picasso.with(viewHolder.itemView.getContext())
+        .load(IMAGE_URL + item.imageUrl + ".png")
+        .into(viewHolder.mWeatherImage);
   }
 
   //adapter count
@@ -55,6 +61,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
     return position;
   }
 
+  //Provide a reference to the views for each data item
   static class ViewHolder extends RecyclerView.ViewHolder {
 
     TextView mWeatherText;
