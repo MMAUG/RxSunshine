@@ -50,7 +50,8 @@ public class WeatherApi {
   /**
    * @return RestAdapter created with API base url. The purpose of creating this method is
    * you can just make separate param for DEBUG and PRODUCTION. In this example is just for log.
-   * But in some cases, different urls, cookies, authen, etc according to debug or production build.
+   * But in some cases, different urls, cookies, authen, etc according to debug or production
+   * build.
    */
   private RestAdapter restAdapter() {
 
@@ -77,7 +78,6 @@ public class WeatherApi {
     return getWeatherService().getWeather(cityName, numOfDays);
   }
 
-  //
   interface WeatherService {
 
     /**
